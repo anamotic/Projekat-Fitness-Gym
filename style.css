@@ -1,0 +1,425 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background: #f9f9f9;
+    color: #333;
+}
+
+h1, h2, h3 {
+    margin: 0 0 1rem;
+    color: #222;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container img {
+    height: 300px;
+}
+
+a {
+    color: #41b660;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header */
+header {
+    background: #41b660;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.nav-menu li {
+    margin: 0 1rem;
+}
+
+.nav-menu a {
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.nav-menu a:hover {
+    background: #317d45;
+}
+
+nav ul li a.active {
+    color: #317d45;
+}
+
+.side-menu {
+    width: 200px;
+    background-color: #41b660;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(200%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.side-menu h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+    background-color: #317d45;
+    padding-bottom: 10px;
+}
+
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.side-menu ul li {
+    margin-bottom: 15px;
+}
+
+.side-menu ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.side-menu ul li a:hover {
+    color: #317d45;
+}
+
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.burger-toggle {
+    display: none;
+}
+
+.burger-menu span {
+    background: #fff;
+    height: 3px;
+    width: 25px;
+    margin: 4px 0;
+}
+
+.hero {
+    color: #fff;
+    padding: 4rem 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.hero p {
+    color: #585252;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    text-align: center;
+}
+
+.hero .btn {
+    padding: 1rem 2rem;
+    background: #41b660;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.hero .btn:hover {
+    background: #41b660;
+    animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 10px #41b660;
+    }
+    to {
+        box-shadow: 0 0 20px #317d45, 0 0 30px #41b660;
+    }
+}
+
+.features {
+    padding: 3rem 0;
+    background: #fff;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.feature {
+    text-align: center;
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #8adc83;
+    transition: transform 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+}
+
+.feature img {
+    width: 500px;
+    height: 400px;
+    border-radius: 10px;
+}
+
+.feature h3 {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.feature p {
+    color: #5a5959;
+}
+
+.about {
+    padding: 2rem 0;
+    background: #fff;
+    text-align: center;
+}
+
+.about p {
+    margin: 1rem 0;
+    line-height: 1.8;
+}
+
+.team {
+    padding: 2rem 0;
+    background: #8adc83;
+    text-align: center;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.team-member img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.team-member h3 {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.team-member p {
+    color: #666;
+}
+
+.services {
+    padding: 2rem 0;
+    background: #fff;
+    text-align: center;
+}
+
+.services p {
+    margin: 1rem 0;
+    line-height: 1.8;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.service img {
+    width: 100%;
+    border-radius: 10px;
+    animation: rotate 2s;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.service h3 {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.service p {
+    color: #666;
+}
+
+.contact {
+    padding: 2rem 0;
+    background: #f5f5f5;
+    text-align: center;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.form-group input[type="radio"],
+.form-group input[type="checkbox"] {
+    width: auto;
+    margin-right: 0.5rem;
+}
+
+.contact .btn {
+    padding: 1rem 2rem;
+    background: #41b660;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+
+    .hero {
+        padding: 2rem 0;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .features-grid, .team-grid, .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .features-grid img{
+        width: 100%;
+    }
+   
+    .burger-menu {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        margin-left: 1rem;
+    }
+    
+    .burger-menu span {
+        background: #fff;
+        height: 3px;
+        width: 25px;
+        margin: 4px 0;
+        transition: all 0.3s ease;
+    }
+    
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        background: #333;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .burger-toggle:checked ~ .nav-menu {
+        display: flex;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu li {
+        margin: 1rem 0;
+    }
+}
